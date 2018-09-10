@@ -2,13 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:QRCodeScanner"
-             x:Class="QRCodeScanner.MainPage">
+             x:Class="QRCodeScanner.MainPage"
+             Title="QR Code Scanner">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Margin="20,0,20,0">
+            <Button Text="Scan" Clicked="ScanBtn_Clicked" Style="{StaticResource btnStyle}" Margin="0,0,0,20" />
+            <Label Text="Return QR Code" TextColor="#FF7B0D" FontSize="16" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            <Label x:Name="returnCodeLbl" TextColor="#1E90FF" FontSize="18" HorizontalTextAlignment="Center" />
+        </StackLayout>
+    </ContentPage.Content>
 
 </ContentPage>
